@@ -5,16 +5,27 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "temp-mail-api"
 version = "1.0.0"
-description = "Email validation CLI for temporary and disposable mail workflows."
+description = "Temp mail API toolkit for disposable inbox testing, signup QA, and email validation."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "realine0" }]
-keywords = ["email-validation", "temporary-email", "disposable-email", "cli"]
+keywords = [
+    "temp-mail-api",
+    "temporary-email",
+    "temp-mail",
+    "disposable-email",
+    "email-api",
+    "inbox-testing",
+    "signup-testing",
+    "email-validation",
+    "cli",
+]
 dependencies = ["requests>=2.31.0"]
 
 [project.scripts]
-temp-mail-check = "temp_mail_api.cli:main"
+temp-mail-api = "temp_mail_api.cli:main"
+temp-mail-check = "temp_mail_api.legacy_cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
